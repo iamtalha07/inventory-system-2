@@ -75,7 +75,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS','arpatechcrm@arpatech.com'),
-        'name' => env('MAIL_FROM_NAME','Ahsan-Traders'),
+        'name' => env('MAIL_FROM_NAME','Hamid-Traders'),
     ],
 
     /*

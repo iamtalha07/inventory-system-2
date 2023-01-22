@@ -31,7 +31,7 @@
             <div class="row">
               <div class="col-12">
                 <h4>
-                  <i class="fas fa-globe"></i> Ahsan Traders
+                  <i class="fas fa-globe"></i> Hamid Traders
                   <small class="float-right">Date: {{$currentDate}}</small>
                 </h4>
               </div>

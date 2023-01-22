@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{{url('home')}}" class="brand-link">
       <img src="/images/admin_images/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">{{config('admin.title.ahsan_traders')}}</span>
+      <span class="brand-text font-weight-light">{{config('admin.title.hamid_traders')}}</span>
     </a>
 
     <!-- Sidebar -->

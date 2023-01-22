@@ -46,7 +46,7 @@
             <div class="row">
               <div class="col-12">
                 <h4>
-                  <i class="fas fa-globe"></i> Ahsan Traders
+                  <i class="fas fa-globe"></i> Hamid Traders
                  
                 </h4>
               </div>

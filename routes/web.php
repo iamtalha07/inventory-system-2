@@ -42,6 +42,16 @@ Route::get('brands/edit-brand/{brand}', 'BrandsController@edit')->name('edit.bra
 Route::put('edit-brand/{brand}','BrandsController@update');
 Route::delete('brand-delete/{brand}', 'BrandsController@delete')->name('brand-delete');
 
+//Categories
+Route::prefix('category')->group(function () {
+Route::get('view-category', 'CategoryController@index')->name('category');
+Route::get('add-category', 'CategoryController@create')->name('categories.add');
+Route::post('add-new-category', 'CategoryController@store')->name('category.add');
+Route::get('edit-category/{category}', 'CategoryController@edit')->name('edit.category');
+Route::put('edit-category/{category}','CategoryController@update');
+Route::delete('category-delete/{category}', 'CategoryController@delete')->name('category-delete');
+});
+
 //Product Routes
 Route::get('products', 'ProductController@index')->name('products');
 Route::get('pagination/fetch_data', 'ProductController@fetch_data');

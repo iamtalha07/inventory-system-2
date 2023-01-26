@@ -58,6 +58,31 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
+              <i class="fas fa-plus-square"></i>
+              <p>
+                Category
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('category')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Categories</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('categories.add')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="fas fa-shopping-bag"></i>
               <p>
                 Products

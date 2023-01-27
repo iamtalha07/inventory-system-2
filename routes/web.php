@@ -83,6 +83,13 @@ Route::get('invoice/invoice-search','InvoiceController@searchInvoice')->name('in
 Route::get('invoice-print/{id}','InvoiceController@InvoicePrint')->name('invoice-print');
 Route::delete('invoice-delete/{invoice}', 'InvoiceController@delete')->name('invoice-delete');
 Route::delete('/selected-invoice-delete','InvoiceController@deleteSelected')->name('invoice.deleteSelectedInvoice');
+Route::get('getCategoryProduct/{id}','InvoiceController@getCategoryProduct');
+
+
+// Route::get('getCourse/{id}', function ($id) {
+//     $course = App\Models\Course::where('category_id',$id)->get();
+//     return response()->json($course);
+// });
 
 //Payment History Routes
 Route::get('invoice/payment-history/{invoice}','InvoiceController@paymentHistory')->name('invoice/payment-history');

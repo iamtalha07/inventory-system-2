@@ -211,10 +211,10 @@ class InvoiceController extends Controller
         return view('invoices.invoice_summary', [
             'data' => $invoice->get(),
             'bookers' => $bookers,
-            'totalDebit' => $totalDebit,
-            'totalCredit' => $totalCredit,
-            'totalDiscount' => $totalDiscount,
-            'GrossTotal' => $GrossTotal,
+            'totalDebit' => number_format($totalDebit,2),
+            'totalCredit' => number_format($totalCredit,2),
+            'totalDiscount' => number_format($totalDiscount,2),
+            'GrossTotal' => number_format($GrossTotal,2),
             'start' => $start,
             'end' => $end,
         ]);
@@ -232,7 +232,7 @@ class InvoiceController extends Controller
             ->whereDate('created_at', '<=', $request->endDate)->get();
         $totalDebit = $invoiceData->where('status', 'Debit')->sum('total');
         $totalCredit = $invoiceData->where('status', 'Credit')->sum('total');
-        return response()->json(['invoice' => $invoice, 'totalDebit' => $totalDebit, 'totalCredit' => $totalCredit]);
+        return response()->json(['invoice' => $invoice, 'totalDebit' => number_format($totalDebit,2), 'totalCredit' => number_format($totalCredit,2)]);
     }
 
     public function paymentHistory(Invoice $invoice)

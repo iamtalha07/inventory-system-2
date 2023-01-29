@@ -150,7 +150,9 @@ class InvoiceController extends Controller
         $discountAmount = 0;
         $grossTotal = 0;
         $additionalDetails = [];
-        // dd($invoice->invoiceProduct[0]->ctn_size);
+
+        $percentageDiscount = $invoice->less_percentage_discount ? ($invoice->total *  $invoice->less_percentage_discount)/100 : 0;
+        
         foreach ($invoice->invoiceProduct as $item) {
             $discountAmount += $item->pivot->amount - $item->pivot->disc_amount;
             $grossTotal += $item->pivot->amount; 
@@ -158,7 +160,7 @@ class InvoiceController extends Controller
         $additionalDetails['discountAmount'] = $discountAmount;
         $additionalDetails['grossTotal'] = $grossTotal;
 
-        return view('invoices.invoice_detail', ['invoice' => $invoice, 'invoiceData' => $additionalDetails]);
+        return view('invoices.invoice_detail', ['invoice' => $invoice, 'invoiceData' => $additionalDetails, 'percentageDiscount' => $percentageDiscount]);
     }
 
     public function InvoicePrint($id)

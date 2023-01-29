@@ -128,8 +128,9 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Less % Discount:</th>
-                                            <td>{{ $invoice->less_percentage_discount ? $invoice->less_percentage_discount . '%' : '-' }}
+                                            <th>Less {{ $invoice->less_percentage_discount ? $invoice->less_percentage_discount . '%' : '%' }} Discount:</th>
+                                            <td>
+                                                {{$percentageDiscount != 0 ? 'Rs.' . $percentageDiscount : '-'}}
                                             </td>
                                         </tr>
                                         <tr>

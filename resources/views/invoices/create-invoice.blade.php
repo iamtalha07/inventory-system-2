@@ -389,6 +389,10 @@
         function addRow() {
         var addRow = '<tr>\n' +
             '<td><select name="product_id[]" class="form-control productname product" required>\n' +
+             '<option value="" selected="true" disabled="true">Select Product</option>\n' +
+                    '@foreach($products as $product)\n' +
+                        '<option value="{{$product->id}}">{{$product->name}}</option>\n' +
+                    '@endforeach\n' +
                 '</select></td>\n' +
             '<td><input type="text" name="ctnQty[]" class="form-control ctnQty"></td>\n' +
             '<td><input type="text" name="qty[]" class="form-control qty"></td>\n' +
